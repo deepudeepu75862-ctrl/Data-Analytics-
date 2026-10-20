@@ -1,0 +1,9 @@
+START HERE
+1. Extract the ZIP.
+2. Open this folder in VS Code or PowerShell.
+3. Install dependencies: pip install -r requirements.txt
+4. Run: python eda_retail_sales.py
+5. Or launch: jupyter notebook retail_sales_eda.ipynb
+
+IMPORTANT: The bundled dataset is synthetic demo data. Replace it with a suitable real
+retail dataset before submitting the task, then rerun the analysis and revise the findings.

@@ -1,0 +1,91 @@
+Automated test exit code: 0
+
+
+=== INITIAL INSPECTION ===
+Shape: (1200, 10)
+
+Data types:
+ Transaction_ID            object
+Date              datetime64[ns]
+Customer_ID               object
+Age                      float64
+Gender                    object
+Product                   object
+Category                  object
+Quantity                   int64
+Unit_Price               float64
+Total_Amount             float64
+dtype: object
+
+Missing values:
+ Transaction_ID    0
+Date              0
+Customer_ID       0
+Age               2
+Gender            1
+Product           1
+Category          0
+Quantity          0
+Unit_Price        1
+Total_Amount      0
+dtype: int64
+
+Duplicate rows: 0
+
+=== DESCRIPTIVE STATISTICS ===
+               Age     Quantity   Unit_Price  Total_Amount
+count  1200.000000  1200.000000  1200.000000   1200.000000
+mean     34.145833     2.460000  2130.859592   5299.991317
+std      10.352482     1.100489  1964.937571   5905.958486
+min      18.000000     1.000000    81.170000     94.380000
+25%      26.000000     1.000000   871.515000   1572.505000
+50%      34.000000     2.000000  1515.690000   3246.440000
+75%      41.000000     3.000000  2472.765000   6770.625000
+max      72.000000     4.000000  8984.500000  35758.480000
+
+Median:
+ Age               34.00
+Quantity           2.00
+Unit_Price      1515.69
+Total_Amount    3246.44
+dtype: float64
+
+Mode:
+ Age               18.00
+Quantity           2.00
+Unit_Price       252.23
+Total_Amount    3031.38
+Name: 0, dtype: float64
+
+Standard deviation:
+ Age               10.352482
+Quantity           1.100489
+Unit_Price      1964.937571
+Total_Amount    5905.958486
+dtype: float64
+
+=== KEY FINDINGS (DEMO DATA) ===
+Total revenue: 6359989.58
+Average transaction value: 5299.99
+Top revenue category: Electronics - 3305225.15
+Best-selling product by units: Wireless Earbuds - 201 units
+Largest age group by transaction: 25–34
+
+=== ACTIONABLE RECOMMENDATIONS ===
+1. Prioritize inventory and promotions for the category with the highest revenue.
+2. Feature best-selling products in bundles and product recommendations.
+3. Use age-group and weekday patterns to test targeted promotions; validate using real data.
+
+Done. Charts and cleaned tables are saved in the outputs/ folder.
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
